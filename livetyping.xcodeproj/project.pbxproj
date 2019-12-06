@@ -3,25 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EB7BDC82A0FB7E683BB3008 /* Pods_livetyping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336B5AC75E45D149FEBAD74D /* Pods_livetyping.framework */; };
 		A72A7EBC239664E9001F4C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A7EBB239664E9001F4C8E /* AppDelegate.swift */; };
-		A72A7EBE239664E9001F4C8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A7EBD239664E9001F4C8E /* ViewController.swift */; };
+		A72A7EBE239664E9001F4C8E /* DrinksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A7EBD239664E9001F4C8E /* DrinksListViewController.swift */; };
 		A72A7EC1239664E9001F4C8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72A7EBF239664E9001F4C8E /* Main.storyboard */; };
 		A72A7EC3239664EB001F4C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72A7EC2239664EB001F4C8E /* Assets.xcassets */; };
 		A72A7EC6239664EB001F4C8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72A7EC4239664EB001F4C8E /* LaunchScreen.storyboard */; };
+		A7E415582399298D00FB16E3 /* CocktailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E415572399298D00FB16E3 /* CocktailService.swift */; };
+		A7E4155C2399482E00FB16E3 /* CocktailDBList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4155B2399482E00FB16E3 /* CocktailDBList.swift */; };
+		A7E4155E239949D600FB16E3 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4155D239949D600FB16E3 /* NetworkProvider.swift */; };
+		A7E4156023994E7100FB16E3 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4155F23994E7100FB16E3 /* Cocktail.swift */; };
+		A7E4156223994E7900FB16E3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4156123994E7900FB16E3 /* Category.swift */; };
+		A7E41564239958B900FB16E3 /* CocktailsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E41563239958B900FB16E3 /* CocktailsDataSource.swift */; };
+		A7E41566239A796300FB16E3 /* DrinksListTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E41565239A796300FB16E3 /* DrinksListTableViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		336B5AC75E45D149FEBAD74D /* Pods_livetyping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_livetyping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		806B58780616FBE12A5D185B /* Pods-livetyping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-livetyping.release.xcconfig"; path = "Target Support Files/Pods-livetyping/Pods-livetyping.release.xcconfig"; sourceTree = "<group>"; };
 		A72A7EB8239664E9001F4C8E /* livetyping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = livetyping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72A7EBB239664E9001F4C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A72A7EBD239664E9001F4C8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A72A7EBD239664E9001F4C8E /* DrinksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksListViewController.swift; sourceTree = "<group>"; };
 		A72A7EC0239664E9001F4C8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A72A7EC2239664EB001F4C8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A72A7EC5239664EB001F4C8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A72A7EC7239664EB001F4C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7E415572399298D00FB16E3 /* CocktailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailService.swift; sourceTree = "<group>"; };
+		A7E4155B2399482E00FB16E3 /* CocktailDBList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDBList.swift; sourceTree = "<group>"; };
+		A7E4155D239949D600FB16E3 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		A7E4155F23994E7100FB16E3 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		A7E4156123994E7900FB16E3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A7E41563239958B900FB16E3 /* CocktailsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsDataSource.swift; sourceTree = "<group>"; };
+		A7E41565239A796300FB16E3 /* DrinksListTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksListTableViewManager.swift; sourceTree = "<group>"; };
+		A9A9543BB819DB0F2E606F66 /* Pods-livetyping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-livetyping.debug.xcconfig"; path = "Target Support Files/Pods-livetyping/Pods-livetyping.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB7BDC82A0FB7E683BB3008 /* Pods_livetyping.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		341511BAE9EB1F502F76CA9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				336B5AC75E45D149FEBAD74D /* Pods_livetyping.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A72A7EAF239664E9001F4C8E = {
 			isa = PBXGroup;
 			children = (
 				A72A7EBA239664E9001F4C8E /* livetyping */,
 				A72A7EB9239664E9001F4C8E /* Products */,
+				D2047EA6FA7F822A48A7C25E /* Pods */,
+				341511BAE9EB1F502F76CA9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +83,62 @@
 		A72A7EBA239664E9001F4C8E /* livetyping */ = {
 			isa = PBXGroup;
 			children = (
+				A7E415532398FAC900FB16E3 /* Classes */,
 				A72A7EBB239664E9001F4C8E /* AppDelegate.swift */,
-				A72A7EBD239664E9001F4C8E /* ViewController.swift */,
+				A72A7EBD239664E9001F4C8E /* DrinksListViewController.swift */,
 				A72A7EBF239664E9001F4C8E /* Main.storyboard */,
 				A72A7EC2239664EB001F4C8E /* Assets.xcassets */,
 				A72A7EC4239664EB001F4C8E /* LaunchScreen.storyboard */,
 				A72A7EC7239664EB001F4C8E /* Info.plist */,
 			);
 			path = livetyping;
+			sourceTree = "<group>";
+		};
+		A7E415532398FAC900FB16E3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A7E415562399294900FB16E3 /* Requests */,
+				A7E415552398FAEB00FB16E3 /* Views */,
+				A7E415542398FAE500FB16E3 /* Models */,
+				A7E41565239A796300FB16E3 /* DrinksListTableViewManager.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A7E415542398FAE500FB16E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A7E4155B2399482E00FB16E3 /* CocktailDBList.swift */,
+				A7E4155F23994E7100FB16E3 /* Cocktail.swift */,
+				A7E4156123994E7900FB16E3 /* Category.swift */,
+				A7E41563239958B900FB16E3 /* CocktailsDataSource.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A7E415552398FAEB00FB16E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7E415562399294900FB16E3 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				A7E415572399298D00FB16E3 /* CocktailService.swift */,
+				A7E4155D239949D600FB16E3 /* NetworkProvider.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		D2047EA6FA7F822A48A7C25E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9A9543BB819DB0F2E606F66 /* Pods-livetyping.debug.xcconfig */,
+				806B58780616FBE12A5D185B /* Pods-livetyping.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A72A7ECA239664EB001F4C8E /* Build configuration list for PBXNativeTarget "livetyping" */;
 			buildPhases = (
+				251D25463252DCCD3269B8ED /* [CP] Check Pods Manifest.lock */,
 				A72A7EB4239664E9001F4C8E /* Sources */,
 				A72A7EB5239664E9001F4C8E /* Frameworks */,
 				A72A7EB6239664E9001F4C8E /* Resources */,
+				AE2159EF6E4F468DC2D7DCCB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +209,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		251D25463252DCCD3269B8ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-livetyping-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE2159EF6E4F468DC2D7DCCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-livetyping/Pods-livetyping-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-livetyping/Pods-livetyping-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-livetyping/Pods-livetyping-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A72A7EB4239664E9001F4C8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A72A7EBE239664E9001F4C8E /* ViewController.swift in Sources */,
+				A72A7EBE239664E9001F4C8E /* DrinksListViewController.swift in Sources */,
 				A72A7EBC239664E9001F4C8E /* AppDelegate.swift in Sources */,
+				A7E4155C2399482E00FB16E3 /* CocktailDBList.swift in Sources */,
+				A7E415582399298D00FB16E3 /* CocktailService.swift in Sources */,
+				A7E4155E239949D600FB16E3 /* NetworkProvider.swift in Sources */,
+				A7E4156023994E7100FB16E3 /* Cocktail.swift in Sources */,
+				A7E4156223994E7900FB16E3 /* Category.swift in Sources */,
+				A7E41564239958B900FB16E3 /* CocktailsDataSource.swift in Sources */,
+				A7E41566239A796300FB16E3 /* DrinksListTableViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +408,7 @@
 		};
 		A72A7ECB239664EB001F4C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9A9543BB819DB0F2E606F66 /* Pods-livetyping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +426,7 @@
 		};
 		A72A7ECC239664EB001F4C8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 806B58780616FBE12A5D185B /* Pods-livetyping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
