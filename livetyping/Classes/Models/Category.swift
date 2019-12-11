@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Category: Codable, Equatable {
+struct Category: Codable, Equatable, Hashable {
     
     // MARK: Properties
     

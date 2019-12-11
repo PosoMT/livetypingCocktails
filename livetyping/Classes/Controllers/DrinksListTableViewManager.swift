@@ -10,12 +10,16 @@ import Foundation
 import UIKit
 
 class DrinksListTableViewManager: NSObject {
+    private let heightForRow = 88
+    
     private var dataSource: CocktailsDataSource
     
     init(dataSource: CocktailsDataSource) {
         self.dataSource = dataSource
     }
 }
+
+//MARK: - UITableViewDataSource
 
 extension DrinksListTableViewManager: UITableViewDataSource {
     
@@ -28,14 +32,21 @@ extension DrinksListTableViewManager: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = dataSource.cocktailForIndex(indexPath: indexPath).strDrink
+        let cell = tableView.dequeueReusableCell(withIdentifier: DrinksTableViewCell.reuseIdentifier) as! DrinksTableViewCell
+        cell.setTitle(title: dataSource.cocktailForIndex(indexPath: indexPath).strDrink)
+        cell.setImage(path: dataSource.cocktailForIndex(indexPath: indexPath).strDrinkThumb)
         return cell
     }
     
 }
 
+//MARK: - UITableViewDataSource
+
 extension DrinksListTableViewManager: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(heightForRow)
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

@@ -12,11 +12,6 @@ class FilterTableViewCell: UITableViewCell {
     
     @IBOutlet weak var title: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     func setTitle(title: String) {
         self.title.text = title
     }

@@ -10,7 +10,7 @@
 		5EB7BDC82A0FB7E683BB3008 /* Pods_livetyping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336B5AC75E45D149FEBAD74D /* Pods_livetyping.framework */; };
 		A72A7EBC239664E9001F4C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A7EBB239664E9001F4C8E /* AppDelegate.swift */; };
 		A72A7EBE239664E9001F4C8E /* DrinksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A7EBD239664E9001F4C8E /* DrinksListViewController.swift */; };
-		A72A7EC1239664E9001F4C8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72A7EBF239664E9001F4C8E /* Main.storyboard */; };
+		A72A7EC1239664E9001F4C8E /* Drinks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72A7EBF239664E9001F4C8E /* Drinks.storyboard */; };
 		A72A7EC3239664EB001F4C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72A7EC2239664EB001F4C8E /* Assets.xcassets */; };
 		A72A7EC6239664EB001F4C8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72A7EC4239664EB001F4C8E /* LaunchScreen.storyboard */; };
 		A7E415582399298D00FB16E3 /* CocktailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E415572399298D00FB16E3 /* CocktailService.swift */; };
@@ -27,6 +27,7 @@
 		A7E416F5239FF09500FB16E3 /* DrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E416F3239FF09400FB16E3 /* DrinksTableViewCell.swift */; };
 		A7E416F6239FF09500FB16E3 /* DrinksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E416F4239FF09400FB16E3 /* DrinksTableViewCell.xib */; };
 		A7E416F9239FF41900FB16E3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E416F8239FF41900FB16E3 /* UIView+Extension.swift */; };
+		A7E416FC23A0FA4600FB16E3 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7E416FB23A0FA4600FB16E3 /* Roboto-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,7 @@
 		A72A7EB8239664E9001F4C8E /* livetyping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = livetyping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72A7EBB239664E9001F4C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A72A7EBD239664E9001F4C8E /* DrinksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksListViewController.swift; sourceTree = "<group>"; };
-		A72A7EC0239664E9001F4C8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A72A7EC0239664E9001F4C8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Drinks.storyboard; sourceTree = "<group>"; };
 		A72A7EC2239664EB001F4C8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A72A7EC5239664EB001F4C8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A72A7EC7239664EB001F4C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		A7E416F3239FF09400FB16E3 /* DrinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksTableViewCell.swift; sourceTree = "<group>"; };
 		A7E416F4239FF09400FB16E3 /* DrinksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksTableViewCell.xib; sourceTree = "<group>"; };
 		A7E416F8239FF41900FB16E3 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		A7E416FB23A0FA4600FB16E3 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		A9A9543BB819DB0F2E606F66 /* Pods-livetyping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-livetyping.debug.xcconfig"; path = "Target Support Files/Pods-livetyping/Pods-livetyping.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +81,10 @@
 		A72A7EAF239664E9001F4C8E = {
 			isa = PBXGroup;
 			children = (
+				A72A7EBB239664E9001F4C8E /* AppDelegate.swift */,
+				A72A7EC2239664EB001F4C8E /* Assets.xcassets */,
 				A72A7EBA239664E9001F4C8E /* livetyping */,
+				A7E4170123A1202300FB16E3 /* Resources */,
 				A72A7EB9239664E9001F4C8E /* Products */,
 				D2047EA6FA7F822A48A7C25E /* Pods */,
 				341511BAE9EB1F502F76CA9C /* Frameworks */,
@@ -98,12 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				A7E415532398FAC900FB16E3 /* Classes */,
-				A72A7EBB239664E9001F4C8E /* AppDelegate.swift */,
-				A7E416C8239FD27700FB16E3 /* FiltersListViewController.swift */,
-				A72A7EBD239664E9001F4C8E /* DrinksListViewController.swift */,
-				A72A7EBF239664E9001F4C8E /* Main.storyboard */,
-				A7E416EA239FEC5600FB16E3 /* Filters.storyboard */,
-				A72A7EC2239664EB001F4C8E /* Assets.xcassets */,
 				A72A7EC4239664EB001F4C8E /* LaunchScreen.storyboard */,
 				A72A7EC7239664EB001F4C8E /* Info.plist */,
 			);
@@ -113,11 +112,12 @@
 		A7E415532398FAC900FB16E3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A7E415562399294900FB16E3 /* API */,
+				A7E416FD23A11F8C00FB16E3 /* Controllers */,
 				A7E416F7239FF40300FB16E3 /* Extensions */,
-				A7E415562399294900FB16E3 /* Requests */,
-				A7E415552398FAEB00FB16E3 /* Views */,
+				A7E4170023A11FF000FB16E3 /* Helpers */,
 				A7E415542398FAE500FB16E3 /* Models */,
-				A7E41565239A796300FB16E3 /* DrinksListTableViewManager.swift */,
+				A7E415552398FAEB00FB16E3 /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -128,7 +128,6 @@
 				A7E4155B2399482E00FB16E3 /* CocktailDBList.swift */,
 				A7E4155F23994E7100FB16E3 /* Cocktail.swift */,
 				A7E4156123994E7900FB16E3 /* Category.swift */,
-				A7E41563239958B900FB16E3 /* CocktailsDataSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,18 +135,20 @@
 		A7E415552398FAEB00FB16E3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A72A7EBF239664E9001F4C8E /* Drinks.storyboard */,
+				A7E416EA239FEC5600FB16E3 /* Filters.storyboard */,
 				A7E416EC239FF05800FB16E3 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		A7E415562399294900FB16E3 /* Requests */ = {
+		A7E415562399294900FB16E3 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				A7E415572399298D00FB16E3 /* CocktailService.swift */,
-				A7E4155D239949D600FB16E3 /* NetworkProvider.swift */,
+				A7E416FE23A11FCC00FB16E3 /* Core */,
+				A7E416FF23A11FD000FB16E3 /* Requests */,
 			);
-			path = Requests;
+			path = API;
 			sourceTree = "<group>";
 		};
 		A7E416EC239FF05800FB16E3 /* Cells */ = {
@@ -183,6 +184,56 @@
 				A7E416F8239FF41900FB16E3 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A7E416FA23A0F9FC00FB16E3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A7E416FB23A0FA4600FB16E3 /* Roboto-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A7E416FD23A11F8C00FB16E3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A72A7EBD239664E9001F4C8E /* DrinksListViewController.swift */,
+				A7E41565239A796300FB16E3 /* DrinksListTableViewManager.swift */,
+				A7E416C8239FD27700FB16E3 /* FiltersListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A7E416FE23A11FCC00FB16E3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A7E415572399298D00FB16E3 /* CocktailService.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A7E416FF23A11FD000FB16E3 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				A7E4155D239949D600FB16E3 /* NetworkProvider.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		A7E4170023A11FF000FB16E3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A7E41563239958B900FB16E3 /* CocktailsDataSource.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A7E4170123A1202300FB16E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A7E416FA23A0F9FC00FB16E3 /* Fonts */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D2047EA6FA7F822A48A7C25E /* Pods */ = {
@@ -257,9 +308,10 @@
 				A72A7EC6239664EB001F4C8E /* LaunchScreen.storyboard in Resources */,
 				A72A7EC3239664EB001F4C8E /* Assets.xcassets in Resources */,
 				A7E416F6239FF09500FB16E3 /* DrinksTableViewCell.xib in Resources */,
+				A7E416FC23A0FA4600FB16E3 /* Roboto-Medium.ttf in Resources */,
 				A7E416EB239FEC5600FB16E3 /* Filters.storyboard in Resources */,
 				A7E416F1239FF07E00FB16E3 /* FilterTableViewCell.xib in Resources */,
-				A72A7EC1239664E9001F4C8E /* Main.storyboard in Resources */,
+				A72A7EC1239664E9001F4C8E /* Drinks.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,12 +383,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A72A7EBF239664E9001F4C8E /* Main.storyboard */ = {
+		A72A7EBF239664E9001F4C8E /* Drinks.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A72A7EC0239664E9001F4C8E /* Base */,
 			);
-			name = Main.storyboard;
+			name = Drinks.storyboard;
 			sourceTree = "<group>";
 		};
 		A72A7EC4239664EB001F4C8E /* LaunchScreen.storyboard */ = {

@@ -15,11 +15,14 @@ class FiltersListViewController: UIViewController {
     
     @IBAction func applyButtonClicked(_ sender: Any) {
         delegate?.setSelectedCategories(categories: selectedCategories)
+        navigationController?.popViewController(animated: true)
     }
     
     private var categories = [Category]()
     private var selectedCategories = [Category]()
     private var delegate: FiltersListDelegate?
+    
+    private var startingSelectedCategories = [Category]()
     
     public static func instantiate(categories: [Category], selectedCategories: [Category], delegate: FiltersListDelegate) -> FiltersListViewController {
         let storyboard = UIStoryboard(name: "Filters", bundle: .main)
@@ -32,8 +35,10 @@ class FiltersListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        startingSelectedCategories = selectedCategories
         configureApplyButton()
         configureTableView()
+        checkEnableButton()
     }
     
     private func configureApplyButton() {
@@ -48,7 +53,13 @@ class FiltersListViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    private func checkEnableButton() {
+        applyButton.isEnabled = Set(selectedCategories) != Set(startingSelectedCategories)
+    }
+    
 }
+
+//MARK: - UITableViewDelegate
 
 extension FiltersListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -64,9 +75,12 @@ extension FiltersListViewController: UITableViewDelegate {
             selectedCell.setCheckmark(enabled: true)
             selectedCategories.append(currentCategory)
         }
+        checkEnableButton()
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+
+//MARK: - UITableViewDataSource
 
 extension FiltersListViewController: UITableViewDataSource {
     

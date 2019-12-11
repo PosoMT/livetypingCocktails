@@ -31,6 +31,7 @@ class DrinksListViewController: UIViewController {
     
     private func configureTableView() {
         tableViewManager = DrinksListTableViewManager(dataSource: dataSource)
+        tableView.register(UINib(nibName: DrinksTableViewCell.reuseIdentifier, bundle: .main), forCellReuseIdentifier: DrinksTableViewCell.reuseIdentifier)
         tableView.delegate = tableViewManager
         tableView.dataSource = tableViewManager
     }
@@ -41,11 +42,17 @@ class DrinksListViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .black
     }
     
+    private func configureFilterImage(filterIsSet: Bool) {
+        navigationItem.rightBarButtonItem?.image = filterIsSet ? #imageLiteral(resourceName: "filterset") : #imageLiteral(resourceName: "filter")
+    }
+    
     @objc private func filterButtonTapped() {
-        let filtersVC = FiltersListViewController.instantiate(categories: dataSource.getCategories(), selectedCategories: dataSource.getSelectedCategories(), delegate: self)
+        let filtersVC = FiltersListViewController.instantiate(categories: dataSource.getAllCategories(), selectedCategories: dataSource.getSelectedCategories(), delegate: self)
         navigationController?.pushViewController(filtersVC, animated: true)
     }
 }
+
+//MARK: - CocktailsDataSourceDelegate
 
 extension DrinksListViewController: CocktailsDataSourceDelegate {
     func categoriesLoaded() {
@@ -55,17 +62,21 @@ extension DrinksListViewController: CocktailsDataSourceDelegate {
     }
     
     func cocktailsLoadedForSection(section: Int) {
-        tableView.reloadData()
         tableView.reloadSections(IndexSet(integer: section), with: .automatic)
     }
 }
 
+//MARK: - FiltersListDelegate
+
 extension DrinksListViewController: FiltersListDelegate {
     func setSelectedCategories(categories: [Category]) {
         dataSource.setSelectedCategories(categories: categories)
+        configureFilterImage(filterIsSet: !categories.isEmpty)
         tableView.reloadData()
     }
 }
+
+//MARK: - Protocols
 
 protocol CocktailsDataSourceDelegate: class {
     func categoriesLoaded()

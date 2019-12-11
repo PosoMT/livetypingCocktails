@@ -23,9 +23,7 @@ class CocktailsDataSource {
     private var filteredCocktails = [[Cocktail]]()
     
     private var categoriesFiltered: Bool {
-        get {
-            return selectedCategories.isEmpty
-        }
+        return selectedCategories.isEmpty
     }
     
     init(delegate: CocktailsDataSourceDelegate) {
@@ -106,7 +104,7 @@ class CocktailsDataSource {
         return categoriesFiltered ? allCocktails[indexPath.section][indexPath.row] : filteredCocktails[indexPath.section][indexPath.row]
     }
     
-    func getCategories() -> [Category] {
+    func getAllCategories() -> [Category] {
         return categories
     }
     

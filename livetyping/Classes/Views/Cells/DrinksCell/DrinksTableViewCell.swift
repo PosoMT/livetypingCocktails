@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DrinksTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var cocktailImageView: UIImageView!
+    
+    func setTitle(title: String) {
+        self.title.text = title
+    }
+    
+    func setImage(path: String) {
+        cocktailImageView.sd_setImage(with: URL(string: path), placeholderImage: #imageLiteral(resourceName: "placeholder"))
     }
     
 }
