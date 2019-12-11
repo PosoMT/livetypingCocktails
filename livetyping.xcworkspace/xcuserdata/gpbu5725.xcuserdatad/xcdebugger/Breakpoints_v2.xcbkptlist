@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "livetyping/Classes/Models/CocktailsDataSource.swift"
-            timestampString = "597336973.736576"
+            timestampString = "597750541.619581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "numberOfRowsInSection(_:)"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "categoriesDidLoad(list:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,61 +26,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "livetyping/Classes/Models/CocktailsDataSource.swift"
-            timestampString = "597336973.736662"
+            timestampString = "597750541.6196541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "cocktailsDidLoadForCategory(category:cocktails:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "setSelectedCategories(categories:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "livetyping/Classes/Models/CocktailsDataSource.swift"
-            timestampString = "597336973.736743"
+            filePath = "livetyping/DrinksListViewController.swift"
+            timestampString = "597750541.6197079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "loadCocktailsForCategory(category:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "categoriesLoaded()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "livetyping.CocktailsDataSource.loadCocktailsForCategory(category: livetyping.Category) -&gt; ()"
-                  moduleName = "livetyping"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gpbu5725/Documents/XCodeProjects/livetyping/livetyping/Classes/Models/CocktailsDataSource.swift"
-                  timestampString = "597336973.831108"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "37">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;livetyping.CocktailDBList&lt;livetyping.Cocktail&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in livetyping.CocktailsDataSource.loadCocktailsForCategory(category: livetyping.Category) -&gt; ()"
-                  moduleName = "livetyping"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gpbu5725/Documents/XCodeProjects/livetyping/livetyping/Classes/Models/CocktailsDataSource.swift"
-                  timestampString = "597336973.833056"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "231">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "livetyping/Classes/DrinksListTableViewManager.swift"
+            timestampString = "597750109.860274"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

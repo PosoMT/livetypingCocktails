@@ -16,14 +16,20 @@ class CocktailsDataSource {
     
     private var categories = [Category]()
     
-    private var cocktails = [[Cocktail]]()
+    private var selectedCategories = [Category]()
+    
+    private var allCocktails = [[Cocktail]]()
+    
+    private var filteredCocktails = [[Cocktail]]()
+    
+    private var categoriesFiltered: Bool {
+        get {
+            return selectedCategories.isEmpty
+        }
+    }
     
     init(delegate: CocktailsDataSourceDelegate) {
         self.delegate = delegate
-    }
-    
-    func test() {
-        loadCategories()
     }
     
     func loadCategories() {
@@ -43,24 +49,9 @@ class CocktailsDataSource {
         delegate?.categoriesLoaded()
     }
     
-    func loadCocktailsForCategory(category: Category) {
-        networkProvider.fetchCocktails(category: category.strCategory) { (result, error) in
-            if let error = error {
-                print(error)
-                return
-            } else {
-                self.cocktailsDidLoadForCategory(category: category, cocktails: result!)
-            }
-        }
-    }
-    
     private func loadCocktailsForCategories(categories: [Category]) {
         var remainingCategories = categories
-        guard let firstCategory = remainingCategories.first else {
-//            self.delegate?.allLoaded()
-            return
-            
-        }
+        guard let firstCategory = remainingCategories.first else { return }
         networkProvider.fetchCocktails(category: firstCategory.strCategory) { (result, error) in
             if let error = error {
                 print(error)
@@ -72,32 +63,55 @@ class CocktailsDataSource {
         }
     }
     
-    func loadAllCocktails() {
-        loadCocktailsForCategories(categories: categories)
+    func loadCocktailsForSelectedCategories() {
+        let categoriesToLoad = categoriesFiltered ? categories : selectedCategories
+        loadCocktailsForCategories(categories: categoriesToLoad)
+    }
+    
+    func setSelectedCategories(categories: [Category]) {
+        selectedCategories.removeAll()
+        selectedCategories.append(contentsOf: categories)
+        filterCocktails()
+    }
+    
+    private func filterCocktails() {
+        filteredCocktails.removeAll()
+        for selectedCategory in selectedCategories {
+            guard let index = categories.firstIndex(of: selectedCategory) else { continue }
+            filteredCocktails.append(allCocktails[index])
+        }
     }
     
     private func cocktailsDidLoadForCategory(category: Category, cocktails: CocktailDBList<Cocktail>) {
         guard let categoryIndex = categories.firstIndex(of: category),
             let downloadedCocktails = cocktails.items else { return }
-        self.cocktails.append(downloadedCocktails)
+        self.allCocktails.append(downloadedCocktails)
         delegate?.cocktailsLoadedForSection(section: categoryIndex)
     }
     
     func numberOfSections() -> Int {
-        return categories.count
+       return categoriesFiltered ? categories.count : selectedCategories.count
     }
     
     func numberOfRowsInSection(_ section: Int) -> Int {
-        guard cocktails.count > section else { return 0 }
-        return cocktails[section].count
+        guard allCocktails.count > section else { return 0 }
+        return categoriesFiltered ? allCocktails[section].count : filteredCocktails[section].count
     }
     
     func categoryForSection(_ section: Int) -> Category {
-        return categories[section]
+        return categoriesFiltered ? categories[section] : selectedCategories[section]
     }
     
     func cocktailForIndex(indexPath: IndexPath) -> Cocktail {
-        return cocktails[indexPath.section][indexPath.row]
+        return categoriesFiltered ? allCocktails[indexPath.section][indexPath.row] : filteredCocktails[indexPath.section][indexPath.row]
+    }
+    
+    func getCategories() -> [Category] {
+        return categories
+    }
+    
+    func getSelectedCategories() -> [Category] {
+        return selectedCategories
     }
 
 }

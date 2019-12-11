@@ -21,6 +21,7 @@ class DrinksListViewController: UIViewController {
         super.viewDidLoad()
         configureDataSource()
         configureTableView()
+        configureNavigationBar()
     }
     
     private func configureDataSource() {
@@ -33,22 +34,45 @@ class DrinksListViewController: UIViewController {
         tableView.delegate = tableViewManager
         tableView.dataSource = tableViewManager
     }
+    
+    private func configureNavigationBar() {
+        let rightBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "filter"), style: .plain, target: self, action: #selector(filterButtonTapped))
+        navigationItem.rightBarButtonItem = rightBarButton
+        navigationController?.navigationBar.tintColor = .black
+    }
+    
+    @objc private func filterButtonTapped() {
+        let filtersVC = FiltersListViewController.instantiate(categories: dataSource.getCategories(), selectedCategories: dataSource.getSelectedCategories(), delegate: self)
+        navigationController?.pushViewController(filtersVC, animated: true)
+    }
 }
 
 extension DrinksListViewController: CocktailsDataSourceDelegate {
     func categoriesLoaded() {
         MBProgressHUD.hide(for: tableView, animated: true)
         tableView.reloadData()
-        dataSource.loadAllCocktails()
+        dataSource.loadCocktailsForSelectedCategories()
     }
     
     func cocktailsLoadedForSection(section: Int) {
+        tableView.reloadData()
         tableView.reloadSections(IndexSet(integer: section), with: .automatic)
+    }
+}
+
+extension DrinksListViewController: FiltersListDelegate {
+    func setSelectedCategories(categories: [Category]) {
+        dataSource.setSelectedCategories(categories: categories)
+        tableView.reloadData()
     }
 }
 
 protocol CocktailsDataSourceDelegate: class {
     func categoriesLoaded()
     func cocktailsLoadedForSection(section: Int)
+}
+
+protocol FiltersListDelegate: class {
+    func setSelectedCategories(categories: [Category])
 }
 
